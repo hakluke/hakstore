@@ -1,0 +1,39 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: thisismypassw000rd
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  hakstore-server:
+    image: 3f2e0d14e098 
+    restart: always
+    environment:
+        HAKSTORE_LICENCE: 01431D05-D34E413C-B66CDCCA-403AFC9C
+        SERVER_HOST: localhost
+        SERVER_PORT: 80
+        DATABASE_HOST: db
+        DATABASE_USER: postgres
+        DATABASE_PASSWORD: thisismypassw000rd
+        DATABASE_NAME: postgres
+        DATABASE_PORT: 5432
+        SSLMODE: disable
+        TIMEZONE: Australia/Brisbane
+        REDIS_HOST: redis
+        REDIS_PORT: 6379
+        REDIS_PASSWORD: "" 
+        SLACK_WEBHOOK: https://hooks.slack.com/services/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
+    ports:
+        - 80:80
+

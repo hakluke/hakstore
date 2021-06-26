@@ -1,0 +1,14 @@
+# Server configurations
+server:
+  host: "localhost"
+  port: 80
+
+# Database  
+database:
+  host: "localhost"
+  user: "postgres"
+  password: "passw0rd"
+  dbname: "postgres"
+  port: "5432"
+  timezone: "Australia/Brisbane"
+  sslmode: "disable"
