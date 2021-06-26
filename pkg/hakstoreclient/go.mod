@@ -1,5 +1,5 @@
-module github.com/hakluke/haktools/pkg/hakstoreclient
+module github.com/hakluke/hakstore/pkg/hakstoreclient
 
-go 1.15
+go 1.16
 
-require gorm.io/gorm v1.20.12
+require gorm.io/gorm v1.21.11

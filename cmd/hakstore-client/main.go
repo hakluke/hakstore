@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/hakluke/haktools/pkg/hakstoreclient"
+	"github.com/hakluke/hakstore/pkg/hakstoreclient"
 	"gopkg.in/yaml.v2"
 )
 
