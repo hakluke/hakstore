@@ -86,13 +86,13 @@ func main() {
 	}
 
 	// check licence key
-	valid, message := checkLicense()
-	if !valid {
-		fmt.Println(message)
-		os.Exit(1)
-	} else {
-		fmt.Println(message)
-	}
+	// valid, message := checkLicense()
+	// if !valid {
+	// 	fmt.Println(message)
+	// 	os.Exit(1)
+	// } else {
+	// 	fmt.Println(message)
+	// }
 
 	// Start mux and define the routes in routes.go
 	r := mux.NewRouter()
