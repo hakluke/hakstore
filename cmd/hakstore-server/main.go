@@ -20,9 +20,8 @@ import (
 // Config struct links with config.yml and environment variables
 type Config struct {
 	Server struct {
-		HakstoreLicense string `yaml:"hakstorelicense" envconfig:"HAKSTORE_LICENSE"`
-		Host            string `yaml:"host" envconfig:"SERVER_HOST"`
-		Port            string `yaml:"port" envconfig:"SERVER_PORT"`
+		Host string `yaml:"host" envconfig:"SERVER_HOST"`
+		Port string `yaml:"port" envconfig:"SERVER_PORT"`
 	} `yaml:"server"`
 	Database struct {
 		Host     string `yaml:"host" envconfig:"DATABASE_HOST"`
@@ -84,15 +83,6 @@ func main() {
 		fmt.Println("Error decoding config.yml", err)
 		return
 	}
-
-	// check licence key
-	// valid, message := checkLicense()
-	// if !valid {
-	// 	fmt.Println(message)
-	// 	os.Exit(1)
-	// } else {
-	// 	fmt.Println(message)
-	// }
 
 	// Start mux and define the routes in routes.go
 	r := mux.NewRouter()

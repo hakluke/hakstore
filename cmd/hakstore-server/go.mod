@@ -6,7 +6,6 @@ require (
 	github.com/go-co-op/gocron v0.6.0
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/gorilla/mux v1.8.0
-	github.com/hakluke/licensely-client-go v0.0.0-20210116030548-22ab0615685d
 	github.com/hakluke/tldomains v0.0.0-20201011114522-9b0ef952dbbd
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/onsi/ginkgo v1.16.4 // indirect
