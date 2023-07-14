@@ -33,6 +33,10 @@ func SendVulnNotification(v Vuln) {
 	// make a string of subdomains associated with this vuln
 	var subsString string
 	length := len(v.Subdomains)
+	if length==0{
+		return 
+	}
+
 	for n, s := range v.Subdomains {
 		subsString = subsString + s.ID
 		if n != length-1 {
@@ -43,6 +47,10 @@ func SendVulnNotification(v Vuln) {
 	// make a string of ips associated with this vuln
 	var ipsString string
 	length = len(v.IPs)
+	if length==0{
+		return
+	}
+	
 	for n, s := range v.IPs {
 		ipsString = ipsString + s.ID
 		if n != length-1 {
